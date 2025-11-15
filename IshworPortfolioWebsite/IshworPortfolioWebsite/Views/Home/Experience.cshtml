@@ -1,0 +1,48 @@
+﻿@model List<Experience>
+@{
+    ViewData["Title"] = "Experience";
+}
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-heading text-center mb-5">Professional Experience</h2>
+
+        <div class="timeline">
+            @foreach (var experience in Model)
+            {
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h4 class="mb-1">@experience.Title</h4>
+                                <h5 class="mb-1">@experience.Company</h5>
+                                <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>@experience.Location | <i class="fas fa-calendar me-2"></i>@experience.Period</p>
+                            </div>
+                            <div class="card-body">
+                                <h6>Responsibilities:</h6>
+                                <ul>
+                                    @foreach (var responsibility in experience.Responsibilities)
+                                    {
+                                        <li>@responsibility</li>
+                                    }
+                                </ul>
+
+                                @if (experience.KeyLearnings != null && experience.KeyLearnings.Any())
+                                {
+                                    <h6>Key Learnings:</h6>
+                                    <ul>
+                                        @foreach (var learning in experience.KeyLearnings)
+                                        {
+                                            <li>@learning</li>
+                                        }
+                                    </ul>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

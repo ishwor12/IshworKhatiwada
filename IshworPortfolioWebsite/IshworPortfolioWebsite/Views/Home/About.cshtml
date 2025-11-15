@@ -1,0 +1,395 @@
+﻿@model List<Skill>
+@{
+    ViewData["Title"] = "About";
+}
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading">About Me</h2>
+                <p class="lead mb-5">Passionate .NET developer with expertise in building scalable enterprise applications and a commitment to continuous learning.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            @foreach (var skillCategory in Model)
+            {
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">@skillCategory.Category</h4>
+                            <div class="skills-list">
+                                @foreach (var skill in skillCategory.Skills)
+                                {
+                                    <span class="badge bg-primary me-2 mb-2">@skill</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="text-center mb-4">Certifications</h3>
+                <p class="text-center text-muted mb-5">Professional certifications and achievements</p>
+
+                <div class="row">
+                    <!-- Power BI Certification -->
+                    <div class="col-md-4 mb-4">
+                        <div class="certification-card text-center">
+                            <div class="certification-image">
+                                <div class="certificate-placeholder powerbi-bg">
+                                    <i class="fas fa-chart-bar fa-3x mb-3 text-white"></i>
+                                    <h5 class="text-white">Power BI</h5>
+                                </div>
+                            </div>
+                            <div class="certification-info mt-3">
+                                <h5>Analyzing and Visualizing Data with Microsoft Power BI</h5>
+                                <p class="text-muted">DataCamp</p>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Data Analysis</span>
+                                    <span class="skill-tag">Visualization</span>
+                                    <span class="skill-tag">Dashboards</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Git Certification -->
+                    <div class="col-md-4 mb-4">
+                        <div class="certification-card text-center">
+                            <div class="certification-image">
+                                <div class="certificate-placeholder git-bg">
+                                    <i class="fab fa-git-alt fa-3x mb-3 text-white"></i>
+                                    <h5 class="text-white">Git</h5>
+                                </div>
+                            </div>
+                            <div class="certification-info mt-3">
+                                <h5>Intermediate Git</h5>
+                                <p class="text-muted">DataCamp</p>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Version Control</span>
+                                    <span class="skill-tag">Branching</span>
+                                    <span class="skill-tag">Collaboration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DevSecOps Certification -->
+                    <div class="col-md-4 mb-4">
+                        <div class="certification-card text-center">
+                            <div class="certification-image">
+                                <div class="certificate-placeholder devsecops-bg">
+                                    <i class="fas fa-shield-alt fa-3x mb-3 text-white"></i>
+                                    <h5 class="text-white">DevSecOps</h5>
+                                </div>
+                            </div>
+                            <div class="certification-info mt-3">
+                                <h5>DevSecOps Certificate</h5>
+                                <p class="text-muted">TryHackMe</p>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Security</span>
+                                    <span class="skill-tag">CI/CD</span>
+                                    <span class="skill-tag">Automation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SQL Certification -->
+                    <div class="col-md-4 mb-4">
+                        <div class="certification-card text-center">
+                            <div class="certification-image">
+                                <div class="certificate-placeholder sql-bg">
+                                    <i class="fas fa-database fa-3x mb-3 text-white"></i>
+                                    <h5 class="text-white">SQL</h5>
+                                </div>
+                            </div>
+                            <div class="certification-info mt-3">
+                                <h5>Intermediate and Basic SQL</h5>
+                                <p class="text-muted">DataCamp</p>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Queries</span>
+                                    <span class="skill-tag">Joins</span>
+                                    <span class="skill-tag">Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Azure Certification -->
+                    <div class="col-md-4 mb-4">
+                        <div class="certification-card text-center">
+                            <div class="certification-image">
+                                <div class="certificate-placeholder azure-bg">
+                                    <i class="fab fa-microsoft fa-3x mb-3 text-white"></i>
+                                    <h5 class="text-white">Azure</h5>
+                                </div>
+                            </div>
+                            <div class="certification-info mt-3">
+                                <h5>Microsoft Azure</h5>
+                                <p class="text-muted">DataCamp</p>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Cloud Computing</span>
+                                    <span class="skill-tag">Services</span>
+                                    <span class="skill-tag">Deployment</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- .NET Certification -->
+                    <div class="col-md-4 mb-4">
+                        <div class="certification-card text-center">
+                            <div class="certification-image">
+                                <div class="certificate-placeholder dotnet-bg">
+                                    <i class="fab fa-microsoft fa-3x mb-3 text-white"></i>
+                                    <h5 class="text-white">.NET</h5>
+                                </div>
+                            </div>
+                            <div class="certification-info mt-3">
+                                <h5>.NET Framework & .NET Core</h5>
+                                <p class="text-muted">Professional Certification</p>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">C#</span>
+                                    <span class="skill-tag">ASP.NET</span>
+                                    <span class="skill-tag">Web API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Certificate 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="certification-card text-center">
+                            <div class="certification-image">
+                                <div class="certificate-placeholder certificate7-bg">
+                                    <i class="fas fa-certificate fa-3x mb-3 text-white"></i>
+                                    <h5 class="text-white">ABC</h5>
+                                </div>
+                            </div>
+                            <div class="certification-info mt-3">
+                                <h5>Advanced Backend Concepts</h5>
+                                <p class="text-muted">Professional Development</p>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Architecture</span>
+                                    <span class="skill-tag">Patterns</span>
+                                    <span class="skill-tag">Best Practices</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Certificate 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="certification-card text-center">
+                            <div class="certification-image">
+                                <div class="certificate-placeholder certificate8-bg">
+                                    <i class="fas fa-laptop-code fa-3x mb-3 text-white"></i>
+                                    <h5 class="text-white">STU</h5>
+                                </div>
+                            </div>
+                            <div class="certification-info mt-3">
+                                <h5>Software Testing & Quality Assurance</h5>
+                                <p class="text-muted">Advanced Certification</p>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Testing</span>
+                                    <span class="skill-tag">QA</span>
+                                    <span class="skill-tag">Automation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- C# Programming Certification -->
+                    <div class="col-md-4 mb-4">
+                        <div class="certification-card text-center">
+                            <div class="certification-image">
+                                <div class="certificate-placeholder csharp-bg">
+                                    <i class="fas fa-code fa-3x mb-3 text-white"></i>
+                                    <h5 class="text-white">C#</h5>
+                                </div>
+                            </div>
+                            <div class="certification-info mt-3">
+                                <h5>C# Programming Mastery</h5>
+                                <p class="text-muted">Advanced Development</p>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">OOP</span>
+                                    <span class="skill-tag">LINQ</span>
+                                    <span class="skill-tag">Async Programming</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="text-center mb-4">Education</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5>Master of Applied Information Technology</h5>
+                                <p class="text-muted">Wintec Te Pūkenga</p>
+                                <p>Feb 2025 - Sep 2026</p>
+                                <p>Hamilton, New Zealand</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5>Bachelor of Information Technology</h5>
+                                <p class="text-muted">Lincoln University College</p>
+                                <p>2019 - 2023</p>
+                                <p>Kathmandu, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5>Diploma in Electronics Engineering</h5>
+                                <p class="text-muted">Acme Engineering College</p>
+                                <p>2012 - 2016</p>
+                                <p>Kathmandu, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Styles {
+    <style>
+        .certification-card {
+            transition: transform 0.3s ease;
+            border: none;
+            background: transparent;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .certification-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .certificate-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+        }
+
+        /* Background colors for different certifications */
+        .powerbi-bg {
+            background: linear-gradient(135deg, #f2c811, #e6b400);
+        }
+
+        .git-bg {
+            background: linear-gradient(135deg, #f05032, #d1402a);
+        }
+
+        .devsecops-bg {
+            background: linear-gradient(135deg, #00b4ab, #009990);
+        }
+
+        .sql-bg {
+            background: linear-gradient(135deg, #336791, #2c5a7f);
+        }
+
+        .azure-bg {
+            background: linear-gradient(135deg, #0078d4, #0063b1);
+        }
+
+        .dotnet-bg {
+            background: linear-gradient(135deg, #512bd4, #3e21a8);
+        }
+
+        .csharp-bg {
+            background: linear-gradient(135deg, #239b56, #1e8449);
+        }
+
+        .certificate7-bg {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+
+        .certificate8-bg {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        .certification-info {
+            padding: 20px 0;
+        }
+
+        .certification-info h5 {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .certification-info .text-muted {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            color: #6c757d !important;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .certificate-placeholder h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .certificate-placeholder i {
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        /* Responsive adjustments */
+        @@media (max-width: 768px) {
+            .certification-info h5 {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+}

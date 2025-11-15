@@ -1,0 +1,77 @@
+﻿@model List<IshworPortfolioWebsite.Models.Project>
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<section class="py-5" id="projects">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">A collection of my recent work and contributions</p>
+            </div>
+        </div>
+
+        <div class="row">
+            @foreach (var project in Model)
+            {
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 project-card">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary">@project.Name</h4>
+                            <p class="text-muted"><strong>Role:</strong> @project.Role</p>
+                            <p><strong>Architecture:</strong> @project.Architecture</p>
+
+                            <h6 class="mt-4">Technologies Used:</h6>
+                            <div class="mb-3">
+                                @foreach (var tech in project.Technologies)
+                                {
+                                    <span class="badge bg-primary me-1 mb-1">@tech</span>
+                                }
+                            </div>
+
+                            <h6>Key Contributions:</h6>
+                            <ul class="list-unstyled">
+                                @foreach (var contribution in project.Contributions)
+                                {
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>@contribution
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Additional Projects Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="text-center mb-4">Other Notable Projects</h3>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Blood Donation Management System</h5>
+                                <p class="text-muted">Role: .NET Developer</p>
+                                <p><strong>Technologies:</strong> WinForms, C#, MS SQL, HTML5, CSS3, Bootstrap, Ajax</p>
+                                <p>Developed a desktop application to manage donor records and blood stock for health institutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Finance and Operations Application</h5>
+                                <p class="text-muted">Role: Associate Software Developer</p>
+                                <p><strong>Technologies:</strong> .NET C#, Azure, Git, X++, Microsoft Dynamics 365 F&O</p>
+                                <p>Developed API-based financial and operations modules under Microsoft Dynamics 365 F&O.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
