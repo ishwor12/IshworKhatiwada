@@ -96,3 +96,4 @@ C:\Users\Lenovo\source\repos\IshworPortfolioWebsite\IshworPortfolioWebsite\obj\D
 C:\Users\Lenovo\source\repos\IshworPortfolioWebsite\IshworPortfolioWebsite\obj\Debug\net10.0\ref\IshworPortfolioWebsite.dll
 C:\Users\Lenovo\source\repos\IshworPortfolioWebsite\IshworPortfolioWebsite\obj\Debug\net10.0\compressed\06q4n6ykr8-{0}-q7xhoow3df-q7xhoow3df.gz
 C:\Users\Lenovo\source\repos\IshworPortfolioWebsite\IshworPortfolioWebsite\obj\Debug\net10.0\compressed\3amdvd3su1-{0}-0agqq6k0h7-0agqq6k0h7.gz
+C:\Users\Lenovo\source\repos\IshworPortfolioWebsite\IshworPortfolioWebsite\obj\Debug\net10.0\IshworPortfolioWebsite.sourcelink.json

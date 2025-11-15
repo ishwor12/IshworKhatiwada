@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="docs\index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="docs\index.cshtml" />
+  </ItemGroup>
+
 </Project>
